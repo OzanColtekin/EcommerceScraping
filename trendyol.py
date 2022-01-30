@@ -9,8 +9,7 @@ class Trendyol:
         self.url = f"https://www.trendyol.com/sr?q={self.keyword}&st={self.keyword}&qt={self.keyword}&os=1&pi="
         self.productLinks = []
         self.getproductlinks()
-        self.dataFrame = pd.DataFrame(columns=['productName', 'ratingCount', 'favories', 'sellerPoint', 'price',
-                                               ])
+        self.dataFrame = pd.DataFrame(columns=['productName', 'ratingCount', 'favories', 'sellerPoint', 'price'])
 
     def gotourl(self, url, x=0):
         self.html = requests.get(url+str(x)).content
